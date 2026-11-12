@@ -7,10 +7,10 @@
     "node": "24.x"
   },
   "scripts": {
-    "dev": "tsx watch src/server.ts",
-    "typecheck": "tsc --noEmit",
+    "dev": "node --import tsx --watch src/server.ts",
+    "typecheck": "node ./node_modules/typescript/bin/tsc --noEmit",
     "test": "node --import tsx --test test/app.test.ts",
-    "build": "tsc",
+    "build": "node ./node_modules/typescript/bin/tsc",
     "start": "node dist/server.js"
   },
   "keywords": [],
